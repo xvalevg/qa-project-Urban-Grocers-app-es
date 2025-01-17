@@ -31,45 +31,45 @@ def negative_assert(kit_body):
  
 # Prueba 1	El número permitido de caracteres (1):
 def test_create_kit_with_1_character_in_name():
-    kit_body = { "name": "a"}
+    kit_body = data.kit_with_1_character_in_name
     positive_assert(kit_body)
 
 # Prueba 2	El número permitido de caracteres (511):
 def test_create_kit_with_511_character_in_name():
-     kit_body = {    "name":"AbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdAbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabC"}
+     kit_body = data.with_511_character_in_name
      positive_assert(kit_body)
 
 # Prueba 3	El número de caracteres es menor que la cantidad permitida (0)
 def test_create_kit_with_0_character_in_name():
-    kit_body = { "name": "" }
+    kit_body = data.with_0_character_in_name
     negative_assert(kit_body)
 
 # Prueba 4	El número de caracteres es mayor que la cantidad permitida (512):
 def test_create_kit_with_512_character_in_name():
-    kit_body = {  "name":"AbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdAbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcD"}
+    kit_body = data.with_512_character_in_name
     negative_assert(kit_body)
 
 # Prueba 5	Se permiten caracteres especiales:
 def test_create_kit_with_special_characters_in_name():
-    kit_body = { "name": '"№%@",' }
+    kit_body = data.special_characters_in_name
     positive_assert(kit_body)
 
 # Prueba 6	Se permiten espacios
 def test_create_kit_with_spaces_in_name():
-    kit_body = { "name": " A Aaa " }
+    kit_body = data.spaces_in_name
     positive_assert(kit_body)
 
 # Prueba 7	Se permiten número
 def test_create_kit_with_numbers_in_name():
-    kit_body = { "name": "123" }
+    kit_body = data.numbers_in_name
     positive_assert(kit_body)
 
 # Prueba 8	El parámetro no se pasa en la solicitud
 def test_create_kit_with_no_parameter_in_name():
-    kit_body = { }
+    kit_body = data.no_parameter_in_name
     negative_assert(kit_body)
 
 # Prueba 9	Se ha pasado un tipo de parámetro diferente (número)
 def test_create_kit_diferent_value_type_as_parameter_in_name():
-    kit_body = { "name": 123 }
+    kit_body = data.diferent_value_type_as_parameter_in_name
     negative_assert(kit_body)
