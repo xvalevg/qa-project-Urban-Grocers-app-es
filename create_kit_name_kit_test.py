@@ -7,14 +7,6 @@ def create_user():
     user_response = sender_stand_request.post_new_user(data.user_body)
     return(user_response.json()["authToken"])
 
-def create_kit(kit_body):
-    token = create_user()
-    kit_response = sender_stand_request.post_products_kits(kit_body, token)
-    print(kit_response.status_code)
-
-kit_body = {  "name":"AbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdAbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcD"}
-create_kit(kit_body)
-
 # Función de prueba positiva
 def positive_assert(kit_body):
     token = create_user()
