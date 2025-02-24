@@ -1,5 +1,11 @@
-# Proyecto Urban Grocers 
-## Por: Ximena Valeria Velasco, cohorte 20
+# Proyecto API TEST para Urban Grocers 
+## Por: Ximena Valeria Velasco
+
+
+Descripción:
+
+Urban Grocers es una plataforma de pedios en línea que permite crear diferentes kits categorizados y realizar pedidos sobre ellos.
+Este proyecto abarca las pruebas de API para una parte de la funcionalidad de crear un kit para un usuario dado.
 
 ### Pruebas para el parámetro name al crear un kit para un usuario dado 
 - Se han realizado 9 pruebas de acuedo a la lista de comprobación, de las cuales 5 pasaron y 4 obtuvieron resultado negativo 
@@ -16,3 +22,4 @@
 - Abre un terminal
 - Ubícate en el terminal la carpeta del proyecto donde se encuentra el archivo create_kit_name_kit_test.py
 - Ejecuta todas las pruebas con el comando ```pytest ```.
+
